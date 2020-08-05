@@ -1,0 +1,260 @@
+
+/*1. public class mcq {
+	public static void main(String[] args) {
+		float a=5.5f;
+		double b=10.0; // if we specify double b=10.0f is also correct.
+		double c=a*b;
+		System.out.println(c);
+	}
+
+}
+
+*/
+
+/* 2. 
+public class mcq {
+	public static void main(String[] args) {
+		C c=new C();
+		System.out.println(c.max(13,29));
+		//System.out.println(c.min(13,29));
+	}
+	
+}
+class A
+{
+	int max(int x, int y)
+	{
+		System.out.println("x is "+x +"  "+"y is "+ y);
+		if(x>y) return x; else return y;
+			
+	}
+}
+class B extends A
+{
+	int max(int x,int y)
+	{ 	System.out.println("x is "+x +"  "+"y is "+ y);
+		return super.max(y, x)-10;
+	}
+}
+class C extends B
+{
+	int max(int x,int y)
+	{
+		System.out.println("x is "+x +"  "+"y is "+ y);
+		return super.max(x+10,y+10);
+	}
+}
+*/
+/* 3.
+class mcq
+{
+	public static void main(String[] args) {
+		try {
+			System.out.println("hello");
+		}
+		finally
+		{
+			System.out.println("handlled ");
+		}
+	}
+}
+
+output: hellohandlled
+*/
+/* 4
+class animal
+{
+	String name="no name";
+	
+	public animal(String s)
+	{
+		name = s;
+	}
+}
+class wiledanimal extends animal
+{	
+	String wname="no family";
+	wiledanimal(String x)
+	{
+		wname=x;
+	}
+}
+public class mcq
+{
+	public static void main(String[] args) {
+		wiledanimal o=new wiledanimal("cat");
+		System.out.println(o.wname);
+	}
+}
+
+output: 
+compilation fails due to error in line no 8
+*/
+
+/* 5.
+interface x
+{
+1.	long a=56d;
+2.	long b=45f;
+3.	long c=10;
+4.	Long cal(int x);
+5.	static Integer cc();
+}
+
+O/P: No error in line 4.
+*/
+
+/*6
+class mcq
+{
+	static int fun(double[] a)
+	{
+		System.out.println("hello");
+		return 0;
+		
+	}
+	public static void main(String[] args) {
+		double ar[]= {5,6};
+		System.out.println(ar[0]);
+		int arr[]= {4,5,6};
+		fun(ar);
+	}
+}
+
+output:reference of array that contains elemnt in double type.
+*/
+/* 7
+abstract class abs
+{
+	void setup()
+	{
+		
+	}
+	abstract int exec();
+	
+}
+class der extends abs
+{
+
+	@Override
+	int exec() {
+		System.out.println("hello");
+		return 0;
+	}
+	
+}
+class mcq
+{
+	public static void main(String[] args) {
+		der o=new der();
+		o.setup();
+		o.exec();
+	}
+	
+}
+output: hello
+*/
+/* 8.
+class mcq
+{
+	public static void main(String[] args) {
+		float a=2.0f;
+		double b=4;
+		double res=a*b;
+		System.out.println(res);
+	}
+}
+
+output: 8.0
+*/
+
+/* 9
+class mcq
+{
+	public static void main(String[] args) {
+		String x="hello";
+		Integer i=10;
+		System.out.println(x instanceof String); //true
+		boolean b=i instanceof Integer;  //true
+		System.out.println(i instanceof Integer);//true
+		b=i instanceof String;  // Compile time error
+	}
+}
+*/
+
+/* 10
+class mcq
+{
+	public static void main(String[] args) {
+		double x[][]= {{5.4,6.5},{6.7,8.7,9.0},{4.6,6,8.90,9.5}};
+		System.out.println(x.length);
+	}
+}
+Output: 3
+*/
+/*
+11.
+ public  abstract interface mcq1      //false
+{
+	
+}
+final abstract class test{  //false
+}
+	
+abstract interface a        //true
+{
+	
+}
+
+public abstract class test{}
+public class mcq
+{
+	public static void main(String[] args) {
+		
+	}
+}
+*/
+/*
+12.
+abstract class shape
+{
+	public abstract void draw();
+}
+public class circule extends shape
+{
+
+	@Override
+	public void draw() {
+		// TODO Auto-generated method stub
+		
+	}
+	void add()
+	{
+		System.out.println("hello");
+	}
+	public static void main(String[] args) {
+		shape s=new circule();  //valid
+		shape s=new shape(); //invalid
+		circule s=new shape();//invlaid
+		s.draw();
+	}
+	
+}*/
+
+
+/* 13.
+  valid declaration of main method
+*/
+/*
+14.
+class circule
+{
+	public static void main(String[] args) {
+		
+	
+	int a=200;
+	byte b=a;  //compile time error unable to concvert from int to byte.
+		
+}}
+*/
+
