@@ -1,0 +1,56 @@
+import java.util.Arrays;
+
+public class MS1Numberbased {
+int resullt(int x, int y, int z)
+
+{
+	String ip1=x+"";
+	String ip2=y+"";
+	String ip3=z+"";
+	int a[]=new int[ip1.length()];
+	int b[]=new int[ip2.length()];
+	int c[]=new int[ip3.length()];
+	int i=0;
+	while(x > 0)
+	{
+		int rem=x%10;
+		x=x/10;
+		a[i]=rem;
+		System.out.println("i loop"+a[i]);
+		i++;
+	}
+	i=0;
+	while(y > 0)
+	{
+		int rem=y%10;
+		y=y/10;
+		b[i]=rem;
+		i++;
+		System.out.println("i loop"+b[i-1]);
+	}
+System.out.println("i loop x"+a[1]);
+	i=0;
+	while(z > 0)
+	{
+		int rem=z%10;
+		z=z/10;
+		c[i]=rem;
+		i++;
+	}
+	for (int j=0;j<a.length;j++)
+	{
+		System.out.println("ree"+a[j]);
+	}
+	Arrays.sort(a);
+	Arrays.sort(b);
+	Arrays.sort(c);
+	int res= (a[0]+b[0]+c[0])+(a[ip1.length()-1]+b[ip2.length()-1]+c[ip3.length()-1]);
+	return res;
+		
+}
+
+public static void main(String[] args) {
+	MS1Numberbased o=new MS1Numberbased();
+	System.out.println(o.resullt(3521, 2452, 1352));
+}
+}
